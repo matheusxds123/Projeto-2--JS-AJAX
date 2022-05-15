@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color: rgba(102,90,208);
+}
+.login{
+    height: 33rem;
+    width: 70rem;
+    border-width: 5px;
+    border-radius: 10px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 28rem;
+}
+.texto{
+    margin-top: 7rem;
+}
+h3{
+    font-family: sans-serif, Arial;
+    font-size: 4rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px rgb(0,0,0);
+}
+@media (min-width: 360px) and (max-width: 480px) {
+    .login{
+        height: 20rem;
+        width: 70vw;
+        border-width: 5px;
+        border-radius: 10px;
+        border-color: rgb(255, 255, 255);
+        border-style: solid;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 37.5vh;
+    }
+    .texto{
+        margin-top: 0.3rem;
+    }
+    
+}
+#username{
+    height: 2.3rem;
+    width: 13rem; 
+}
+#password{
+    height: 2.3rem;
+    width: 13rem;
+}
+#btEntrar{
+    width: 13rem;
+    height: 3rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: rgb(255, 2552, 255);
+    background-color: rgb(88, 75, 209);
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: rgb(255, 255, 255);
+}
