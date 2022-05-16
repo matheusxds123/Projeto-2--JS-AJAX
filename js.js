@@ -19,12 +19,23 @@ document.querySelector("#btEntrar").addEventListener("click", function () {
         let button = document.createElement("button");
         button.innerHTML = "Pesquisar";
         document.body.appendChild(button);
-        let list = document.createElement("ul");
-        for(let i = 0; i < 10; i++){
-            let search = document.createElement("li");
-            let text = document.createTextNode("Teste");
-        }
+
         
+        let list = document.querySelector("ul");
+        document.querySelector("button").addEventListener("click", function (){
+            var query = document.querySelector("input").value;
+            axios.get("https://api.pokemontcg.io/v2/cards?q=name:" + query)
+                .then(function(res){
+                    let docs = res.data;
+                    for(let i = 0; i<10; i++){
+                    let search = document.createElement("li");
+                    search.innerHTML = data[i].name;
+                    list.appendChild(search);
+                    }; 
+                });
+                //Não consegui fazer funcionar, ele não consegue acessar o elemento data, fala que ele não é definido
+                //Já o sistema de login com o reqres.in eu não entendi o funcionamento nem consegui utiliza-lo
+        });
     } else{
         alert("Usuário ou senha inválidos! (Olhar console)");
     }
